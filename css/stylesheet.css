@@ -1,0 +1,18 @@
+
+#principal{
+    background: url("Estadio_Futbol.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#titulo{
+    color: white;
+    text-align: center;
+}
+
+#slogan{
+    color: white;
+    text-align: center;
+
+}
