@@ -25,3 +25,9 @@ h4{
     font-weight: bold;
 }
 
+#tabla{
+    background: url("LigaMX.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+}
