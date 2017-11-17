@@ -90,8 +90,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estadisticas</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Tabla de posiciones</a>
-                        <a class="dropdown-item" href="#">Tabla de goleo</a>
+                        <a class="dropdown-item" href="tdp.html">Tabla de posiciones</a>
+                        <a class="dropdown-item" href="gol.html">Tabla de goleo</a>
                     </div>
                 </li>
 
@@ -120,12 +120,12 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators " >
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
                     </ol>
                     <div class="carousel-inner rounded">
                         <div class="carousel-item active" style="height: 60vh" >
-                            <img class="d-block w-100 " src="img/Imagenes_Noticias/Isco_lesion%20(2).jpg" alt="First slide"  >
+                            <img class="d-block w-100 " src="img/Imagenes_Noticias/Isco_lesion%20(2).jpg" alt="First slide" onclick="redirectImg(1)" >
                             <div class="carousel-caption d-none d-md-block">
                                 <h4>Isco, causa baja por lesion</h4>
                                 <p>La Federación Española de Fútbol ha confirmado que Isco
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" style="height: 60vh" >
-                            <img class="d-block w-100" src="img/Imagenes_Noticias/chivas_femenil.jpg" alt="Second slide"  >
+                            <img class="d-block w-100" src="img/Imagenes_Noticias/chivas_femenil.jpg" alt="Second slide" onclick="redirectImg2(2)" >
                             <div class="carousel-caption d-none d-md-block">
                                 <h4>Chivas, primer finalista de la Liga MX Femenil</h4>
                                 <p>Chivas logró su pase a la Final de la Liga MX Femenil al
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" style="height: 60vh">
-                            <img class="d-block w-100" src="img/Imagenes_Noticias/gio-sele.jpg" alt="Third slide" >
+                            <img class="d-block w-100" src="img/Imagenes_Noticias/gio-sele.jpg" alt="Third slide" onclick="redirectImg3(3)">
                             <div class="carousel-caption d-none d-md-block">
                                 <h4>Giovani Dos Santos</h4>
                                 <p>Giovani Dos Santos será baja del Tricolor después de una lesión muscular
@@ -152,7 +152,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" style="height: 60vh">
-                            <img class="d-block w-100" src="img/Imagenes_Noticias/liguilla.png" alt="Third slide" >
+                            <img class="d-block w-100" src="img/Imagenes_Noticias/liguilla.png" alt="Fourth slide" onclick="redirectImg4(4)" >
                             <div class="carousel-caption d-none d-md-block">
                                 <h4>Lista La Liguilla del Ascenso MX.</h4>
                                 <p>Lista la Liguilla del Ascenso MX. El Celaya Tratara de Hacer Valida
@@ -186,5 +186,9 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/1.js"></script>
+<script src="js/2.js"></script>
+<script src="js/3.js"></script>
+<script src="js/4.js"></script>
 </body>
 </html>
