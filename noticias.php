@@ -10,6 +10,16 @@
 
     <title>Analisis Profundo</title>
 
+    <script >
+        function getNoticia(titulo,imagen,encabezado) {
+            titulos=titulo;
+            noticias=noticia;
+            imagenes=imagen;
+            encabezados=encabezado;
+            alert(titulo);
+
+        }
+    </script>
 
 </head>
 
@@ -21,7 +31,7 @@
     </button>
 
     <a class="navbar-brand" href="index.html">
-        <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="Logo de Pagina">
+        <img src="img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo de Pagina">
     </a>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -91,7 +101,7 @@
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estadisticas</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="tabla_de_posiciones.html">Tabla de posiciones</a>
-                    <a class="dropdown-item" href="tabla_de_goleo.html">Tabla de goleo</a>
+                    <a class="dropdown-item" href="#">Tabla de goleo</a>
                 </div>
             </li>
 
@@ -109,131 +119,15 @@
 
 
 <section id="principal" class="container-fluid slider">
+
+
+
     <header>
-        <h1>Tercer Tiempo</h1>
-        <h2>El mejor analisis futbolero solo aqui</h2>
+        <script>document.op("<h1>"+titulos+"</h1>")</script>
     </header>
 
-
-    <div class="row ml-3 mt-5 mr-3">
-        <div class="col-7 ">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators " >
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active"></li>
-                </ol>
-                <div class="carousel-inner rounded">
-
-                    <?php
-                        require("Conexion.php");
-                        $datos=consulta_carousel_noticias();
-                    ?>
-
-                    <div class="carousel-item active" style="height: 65vh" >
-                        <img class="d-block w-100 " src="<?php print($datos[0]['IMAGEN']) ?>" alt="First slide" onclick="redirectImg($datos[0]['ID_NOTICIA')" >
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="height: 65vh" >
-                        <img class="d-block w-100" src="<?php print($datos[0]['IMAGEN']) ?>" alt="Second slide" onclick="redirectImg($datos[0]['ID_NOTICIA')" >
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="height: 65vh">
-                        <img class="d-block w-100" src="<?php print($datos[0]['IMAGEN']) ?>" alt="Third slide" onclick="redirectImg($datos[0]['ID_NOTICIA')">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="height: 65vh">
-                        <img class="d-block w-100" src="<?php print($datos[0]['IMAGEN']) ?>" alt="Fourth slide" onclick="redirectImg($datos[0]['ID_NOTICIA')" >
-                        <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
-
-
-
-        <div id="tabla" class="col-4 ml-5 pl-5" >
-            <h3 class="text-center mr-3" style="color: white">Proximos Partidos</h3>
-            <h6 class="text-center mr-3" style="color: white">Jornada 17 Liga mx</h6>
-            <div class="row mt-5">
-                <div class="col-5" style="color: white"><h6>Puebla</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Lobos BUAP</h6></div>
-            </div>
-            <div class="row ">
-                <div class="col-5" style="color: white"><h6>Atlas</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Pachuca</h6></div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-5" style="color: white"><h6>Queretaro</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Pumas</h6></div>
-            </div>
-            <div class="row">
-                <div class="col-5" style="color: white"><h6>Cruz Azul</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Veracruz</h6></div>
-            </div>
-            <div class="row">
-                <div class="col-5" style="color: white"><h6>Monterrey</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Tigres</h6></div>
-            </div>
-            <div class="row">
-                <div class="col-5" style="color: white"><h6>Leon</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Guadalajara</h6></div>
-            </div>
-            <div class="row">
-                <div class="col-5" style="color: white"><h6>Necaxa</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Morelia</h6></div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-5" style="color: white"><h6>Toluca</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Tijuana</h6></div>
-            </div>
-            <div class="row">
-                <div class="col-5" style="color: white"><h6>Santos</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>America</h6></div>
-            </div>
-        </div>
-
-
-    </div>
-
-
 </section>
-<!--
 
--->
 
 
 
@@ -241,10 +135,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/cambiar_paginas.js"></script>
-
-
-
-
+<script src="js/cambiar_pag_noticias.js"></script>
 </body>
 </html>

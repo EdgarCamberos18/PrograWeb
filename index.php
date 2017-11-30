@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+
+
+    http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -132,31 +135,31 @@
                     ?>
 
                     <div class="carousel-item active" style="height: 65vh" >
-                        <img class="d-block w-100 " src="<?php print($datos[0]['IMAGEN']) ?>" alt="First slide" onclick="redirectImg($datos[0]['ID_NOTICIA')" >
+                        <img class="d-block w-100 " src="<?php print($datos[0]['IMAGEN']) ?>" alt="First slide" onclick="redirectImg('<?php echo utf8_encode( $datos[0]['TITULO']);?>','<?php echo utf8_encode($datos[0]['ENCABEZADO']);?>','<?php echo utf8_encode( $datos[0]['IMAGEN']);?>')">
                         <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
+                            <h4><?php echo utf8_encode($datos[0]['TITULO']) ?></h4>
+                            <p> <?php echo utf8_encode($datos[0]['ENCABEZADO']) ?></p>
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 65vh" >
-                        <img class="d-block w-100" src="<?php print($datos[0]['IMAGEN']) ?>" alt="Second slide" onclick="redirectImg($datos[0]['ID_NOTICIA')" >
+                        <img class="d-block w-100" src="<?php print($datos[1]['IMAGEN']) ?>" alt="Second slide" onclick="redirectImg('<?php echo $datos[1]['TITULO'];?>','<?php echo $datos[1]['ENCABEZADO'];?>','<?php echo $datos[1]['IMAGEN'];?>')" >
                         <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
+                            <h4><?php echo utf8_encode($datos[1]['TITULO']) ?></h4>
+                            <p> <?php echo utf8_encode($datos[1]['ENCABEZADO']) ?></p>
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 65vh">
-                        <img class="d-block w-100" src="<?php print($datos[0]['IMAGEN']) ?>" alt="Third slide" onclick="redirectImg($datos[0]['ID_NOTICIA')">
+                        <img class="d-block w-100" src="<?php print($datos[2]['IMAGEN']) ?>" alt="Third slide" onclick="redirectImg('<?php echo $datos[1]['TITULO'];?>','<?php echo $datos[1]['ENCABEZADO'];?>','<?php echo $datos[1]['IMAGEN'];?>','<?php echo $datos[1]['NOTICIA'];?>')">
                         <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
+                            <h4><?php echo utf8_encode($datos[2]['TITULO']) ?></h4>
+                            <p> <?php echo utf8_encode($datos[2]['ENCABEZADO']) ?></p>
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 65vh">
-                        <img class="d-block w-100" src="<?php print($datos[0]['IMAGEN']) ?>" alt="Fourth slide" onclick="redirectImg($datos[0]['ID_NOTICIA')" >
+                        <img class="d-block w-100" src="<?php print($datos[3]['IMAGEN']) ?>" alt="Fourth slide" onclick="redirectImg('<?php echo $datos[1]['TITULO'];?>','<?php echo $datos[1]['ENCABEZADO'];?>','<?php echo $datos[1]['IMAGEN'];?>','<?php echo $datos[1]['NOTICIA'];?>')" >
                         <div class="carousel-caption d-none d-md-block">
-                            <h4><?php print($datos[0]['TITULO']) ?></h4>
-                            <p> <?php print($datos[0]['ENCABEZADO']) ?></p>
+                            <h4><?php echo utf8_encode($datos[3]['TITULO']) ?></h4>
+                            <p> <?php echo utf8_encode($datos[3]['ENCABEZADO']) ?></p>
                         </div>
                     </div>
                 </div>
@@ -174,12 +177,12 @@
 
 
 
-        <div id="tabla" class="col-4 ml-5 pl-5" >
-            <h3 class="text-center mr-3" style="color: white">Proximos Partidos</h3>
-            <h6 class="text-center mr-3" style="color: white">Jornada 17 Liga mx</h6>
-            <div class="row mt-5">
-                <div class="col-5" style="color: white"><h6>Puebla</h6></div>
-                <div class="col-2" style="color: white"><h6>VS</h6></div>
+            <div id="tabla" class="col-4 ml-5 pl-5" >
+                <h3 class="text-center mr-3" style="color: white">Proximos Partidos</h3>
+                <h6 class="text-center mr-3" style="color: white">Jornada 17 Liga mx</h6>
+                <div class="row mt-5">
+                    <div class="col-5" style="color: white"><h6>Puebla</h6></div>
+                    <div class="col-2" style="color: white"><h6>VS</h6></div>
                 <div class="col-5" style="color: white"><h6>Lobos BUAP</h6></div>
             </div>
             <div class="row ">
@@ -206,7 +209,7 @@
             <div class="row">
                 <div class="col-5" style="color: white"><h6>Leon</h6></div>
                 <div class="col-2" style="color: white"><h6>VS</h6></div>
-                <div class="col-5" style="color: white"><h6>Guadalajara</h6></div>
+               <div class="col-5" style="color: white"><h6>Guadalajara</h6></div>
             </div>
             <div class="row">
                 <div class="col-5" style="color: white"><h6>Necaxa</h6></div>
@@ -227,10 +230,10 @@
         </div>
 
 
-    </div>
+        </div>
 
 
-</section>
+    </section>
 <!--
 
 -->
