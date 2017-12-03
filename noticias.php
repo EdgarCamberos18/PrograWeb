@@ -10,88 +10,83 @@
 
     <title>Analisis Profundo</title>
 
-    <script >
-        function getNoticia(titulo,imagen,encabezado) {
-            titulos=titulo;
-            noticias=noticia;
-            imagenes=imagen;
-            encabezados=encabezado;
-            alert(titulo);
 
-        }
-    </script>
+
 
 </head>
 
-<body>
+<body class="body1">
 
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse sticky-top ">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" href="index.html">
-        <img src="img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo de Pagina">
+    <a class="navbar-brand" href="index.php">
+        <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top rounded-circle" alt="Logo de Pagina">
     </a>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Equipos</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item align-content-center" href="#">
+                    <a class="dropdown-item align-content-center" href="Equipos.php?Equipo=1">
                         <img src="img/Logos_Equipos/America.png" class="d-inline-block align-top" alt="America" width="20" height="20">
                         America</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=2">
                         <img src="img/Logos_Equipos/Atlas.png" class="d-inline-block align-top" alt="Atlas" width="20" height="20">
                         Atlas</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=3">
                         <img src="img/Logos_Equipos/Chivas.png" class="d-inline-block align-top" alt="Chivas" width="20" height="20">
                         C. Guadalajara</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=4">
                         <img src="img/Logos_Equipos/Leon.png" class="d-inline-block align-top" alt="Leon" width="20" height="20">
                         Club Leon</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=18">
+                        <img src="img/Logos_Equipos/Cruz-Azul.png" class="d-inline-block align-top" alt="CruzAzul" width="20" height="20">
+                        Cruz Azul</a>
+                    <a class="dropdown-item" href="Equipos.php?Equipo=5">
                         <img src="img/Logos_Equipos/Lobos.png" class="d-inline-block align-top" alt="Lobos" width="20" height="20">
                         Lobos BUAP</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=6">
                         <img src="img/Logos_Equipos/Monterrey.png" class="d-inline-block align-top" alt="Monterrey" width="20" height="20">
                         C.F. Monterrey</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=7">
                         <img src="img/Logos_Equipos/Morelia.png" class="d-inline-block align-top" alt="Morelia" width="20" height="20">
                         C.A. Monarcas Morelia</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=8">
                         <img src="img/Logos_Equipos/Necaxa.png" class="d-inline-block align-top" alt="Necaa" width="20" height="20">
                         Club Necaxa</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=9">
                         <img src="img/Logos_Equipos/Pachuca.png" class="d-inline-block align-top" alt="Pachuca" width="20" height="20">
                         C.F. Pachuca</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=10">
                         <img src="img/Logos_Equipos/Puebla.png" class="d-inline-block align-top" alt="Puebla" width="20" height="20">
                         Club Puebla</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=11">
                         <img src="img/Logos_Equipos/Queretaro.png" class="d-inline-block align-top" alt="Queretaro" width="20" height="20">
                         Queretaro FC</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=12">
                         <img src="img/Logos_Equipos/Santos.png" class="d-inline-block align-top" alt="Santos" width="20" height="20">
                         Santos Laguna</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=13">
                         <img src="img/Logos_Equipos/Tigres.png" class="d-inline-block align-top" alt="Tigres" width="20" height="20">
                         Tigres de la UANL</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=17">
                         <img src="img/Logos_Equipos/xolos.png" class="d-inline-block align-top" alt="Xolos" width="20" height="20">
                         Club Tijuana</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=14">
                         <img src="img/Logos_Equipos/Toluca.png" class="d-inline-block align-top" alt="Toluca" width="20" height="20">
                         Deportivo Toluca</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=15">
                         <img src="img/Logos_Equipos/Pumas.png" class="d-inline-block align-top" alt="Pumas" width="20" height="20">
                         Pumas de la UNAM</a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="Equipos.php?Equipo=16">
                         <img src="img/Logos_Equipos/Veracruz.png" class="d-inline-block align-top" alt="Veracruz" width="20" height="20">
                         T.R. Veracruz</a>
                 </div>
@@ -118,13 +113,31 @@
 </nav>
 
 
-<section id="principal" class="container-fluid slider">
+<section id="principal" class="container-fluid slider ">
 
-
+    <?php
+        require("Conexion.php");
+        $datos=consultar_por_id('noticia','ID_NOTICIA',$_GET['noticia']);
+    ?>
 
     <header>
-        <script>document.op("<h1>"+titulos+"</h1>")</script>
+        <h1 class="pt-5 pl-5 pr-5 pb-2"><?php echo utf8_encode($datos->TITULO)?></h1>
+        <h3><?php echo utf8_encode($datos->ENCABEZADO)?></h3>
     </header>
+
+    <article class="p-5" >
+        <div style="text-align:center" >
+            <img class="p-5" style="height: 70vh" src="<?php echo utf8_encode($datos->IMAGEN)?>">
+        </div>
+        <div class="backG" >
+            <h4 class="backG1"><?php echo utf8_encode($datos->NOTICIA)?></h4>
+        </div>
+    </article>
+
+    <footer class="text-right" >
+        <img src="img/logo.jpg" width="200" height="200" class="d-inline-block align-content-end rounded-circle" alt="Logo">
+    </footer>
+
 
 </section>
 

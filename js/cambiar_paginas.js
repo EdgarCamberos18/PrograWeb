@@ -1,6 +1,5 @@
-function redirectImg(titulo, encabezado,imagen){
-    location.href="noticias.php";
-    getNoticia(titulo,encabezado,imagen);
+function redirectImg(id_noticia){
+    location.href="noticias.php?noticia="+id_noticia;
 }
 
 

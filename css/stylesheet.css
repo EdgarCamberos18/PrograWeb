@@ -1,9 +1,9 @@
-
-#principal{
+.body1 {
     background: url("Estadio_Futbol.jpg");
     height: 90.9vh;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
 }
 
 header{
@@ -11,24 +11,26 @@ header{
     text-align: center;
 }
 
-p{
-
-    background: #1d1e1f;
-    color:#ebebeb;
-    font-weight: bold;
-}
-
-h4{
-    margin-bottom: 0%;
-    background: #1d1e1f;
+.backG{
     color:#dddddd;
-    font-weight: bold;
+    background: #000000;
+    opacity: 0.7;
+    margin-bottom: 0%;
 }
+
+.backG1{
+    color: #ffffff;
+    background: #000000;
+    opacity: 0.9;
+    margin-bottom: 0%;
+}
+
 
 #tabla{
     background: url("LigaMX.jpg");
     height: 65vh;
     background-size: cover;
     background-position: center;
+    opacity: 0.9;
 }
 

@@ -30,14 +30,28 @@
 
         $i = 0;
         foreach ($con->query($sql) as $fila) {
-            $datos[$i]['NOTICIA'] = $fila['NOTICIA'];
             $datos[$i]['TITULO'] = $fila['TITULO'];
             $datos[$i]['ENCABEZADO'] = $fila['ENCABEZADO'];
             $datos[$i]['IMAGEN'] = $fila['IMAGEN'];
+            $datos[$i]['ID_NOTICIA'] = $fila['ID_NOTICIA'];
             $i++;
         }
         return $datos;
     }
 
+    function consultar_por_id($TABLE,$CAMPO_ID,$ID){
+        $con=conectar();
+        $sql = "SELECT * FROM $TABLE WHERE $CAMPO_ID = '$ID'";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+        $rows = $stmt ->fetchAll(\PDO::FETCH_OBJ);
+        foreach ($rows as $row){
+            return $row;
+        }
+        return 'Error';
+
+    }
+
+    //consultar_por_id('equipos','NOMBRE_EQUIPO','Atlas de Guadalajara');
 
 ?>
