@@ -95,13 +95,13 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estadisticas</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="tabla_de_posiciones.html">Tabla de posiciones</a>
-                    <a class="dropdown-item" href="#">Tabla de goleo</a>
+                    <a class="dropdown-item" href="tabla_de_posiciones.php">Tabla de posiciones</a>
+                    <!--<a class="dropdown-item" href="tabla_de_goleo.html">Tabla de goleo</a>-->
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="About.html">About</a>
             </li>
         </ul>
 

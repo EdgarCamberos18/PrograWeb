@@ -52,6 +52,30 @@
 
     }
 
-    //consultar_por_id('equipos','NOMBRE_EQUIPO','Atlas de Guadalajara');
+    function tablaLiderato(){
+        $con=conectar();
+        $sql = "SELECT e.NOMBRE_EQUIPO,tp.P_JUGADOS,tp.P_GANADOS,tp.P_EMPATADOS,tp.P_PERDIDOS,tp.G_FAVOR,tp.G_CONTRA,tp.G_DIFERENCA,tp.PUNTOS FROM tabla_posiciones AS tp, equipos AS e where e.ID_EQUIPO=tp.ID_EQUIPO";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+        $rows = $stmt ->fetchAll(\PDO::FETCH_OBJ);
+        return $rows;
+    }
+
+
+    function insert_noticia(){
+        $titulo=$_POST['TITULO'];
+        $encabezado=$_POST['ENCABEZADO'];
+        $imagen="img/Imagenes_Noticias/".$_POST['IMAGEN'];
+        $noticia=$_POST['NOTICIA'];
+
+        $con=conectar();
+        $sql = "INSERT INTO noticia (TITULO,ENCABEZADO,IMAGEN,NOTICIA) VALUES ('$titulo','$encabezado','$imagen','$noticia')";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+
+
+    }
+
+
 
 ?>

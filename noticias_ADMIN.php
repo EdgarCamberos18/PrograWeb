@@ -12,8 +12,9 @@
 
     <title>Analisis Profundo</title>
 
-
-
+    <?php
+        require ("Conexion.php");
+    ?>
 
 </head>
 
@@ -97,13 +98,13 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estadisticas</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="tabla_de_posiciones.html">Tabla de posiciones</a>
-                    <a class="dropdown-item" href="#">Tabla de goleo</a>
+                    <a class="dropdown-item" href="tabla_de_posiciones.php">Tabla de posiciones</a>
+                    <!--<a class="dropdown-item" href="tabla_de_goleo.html">Tabla de goleo</a>-->
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="About.html">About</a>
             </li>
         </ul>
 
@@ -126,30 +127,40 @@
     <section style="align-content: center">
         <div class="row">
             <div class="col-8 offset-2">
-                <form>
-                    <div class="form-group">
-                        <label style="color: white" for="exampleFormControlInput1">Titulo</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                <form  id="formulario" method="post"   >
 
-                        <label style="color: white" for="exampleFormControlInput1">Encabezado</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
+
+                    <div class="form-group">
+                        <label style="color: white">Titulo</label>
+                        <input type="text" name="TITULO" required class="form-control" >
 
                     </div>
 
-                    <div>
-                        <input id="input-b3" name="input-b3[]" type="file" class="file" multiple
+                    <div class="form-group">
+                        <label style="color: white" >Encabezado</label>
+                        <input type="text" name="ENCABEZADO" required class="form-control" >
+
+                    </div>
+
+                    <div class="form-group">
+                        <label style="color: white" >Imagen</label>
+                        <input  required  type="file" name="IMAGEN" class="file" multiple
                         data-show-upload="false" data-show-caption="true" data-msg-placeholder="Select {files} for upload...">
                     </div>
 
                     <div class="form-group">
-                        <label style="color: white" for="exampleFormControlTextarea1">Nota</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                        <label style="color: white"  >Nota</label>
+                        <textarea class="form-control" name="NOTICIA" required rows="10"></textarea>
+
                     </div>
-                    <button type="submit" class="btn btn-primary mt-3 mb-5" >Submit</button>
-                    <
+
+                        <button type="submit"   onsubmit="<?php insert_noticia() ?>" id="publicar"  value="publicar"  class="btn btn-primary mt-3 mb-5" >Publicar</button>
+
+
                 </form>
             </div>
         </div>
+
 
     </section>
 
@@ -163,12 +174,16 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/cambiar_pag_noticias.js"></script>
-<script src="http/:aja"></script>
+<script src="js/cambiar_paginas.js"></script>
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/fileinput.min.js" type="text/javascript"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="js/ajax.js" type="text/javascript"></script>
+
+<script src="js/jquery-3.2.1.min.js"></script>
 
 
 </body>
