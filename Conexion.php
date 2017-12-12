@@ -76,6 +76,21 @@
 
     }
 
+    function usuario(){
+        $usuario = $_POST["inputEmail"];
+        $pass = $_POST["inputPassword"];
 
+        $con=conectar();
+        $sql = "SELECT * FROM usuario WHERE EMAIL = '$usuario ' AND PASS = $pass";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+        $rows = $stmt ->fetchAll(\PDO::FETCH_OBJ);
+        foreach ($rows as $row){
+            echo $row;
+            return $row;
+        }
+        return 'Error';
+
+    }
 
 ?>

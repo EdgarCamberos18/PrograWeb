@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/modal.css">
 
     <title> Acerca de Que </title>
 
@@ -30,7 +31,7 @@
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item dropdown">
@@ -106,6 +107,13 @@
             </li>
         </ul>
 
+
+
+
+        <li class="form-inline mr-4"  mr-sm-2">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" >Log in</a>
+        </li>
+
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -113,9 +121,33 @@
     </div>
 </nav>
 
+<div class="modal" style="background: "black"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="container">
+        <div class="card card-container" style="background: url('img/modal.jpg')")>
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" id="form" method="post" action="index.php">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label style="color: #31b0d5">
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" id="cuenta" type="submit" onsubmit="<?php usuario() ?>">Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot-password
+            </a>
+        </div><!-- /card-container -->
+    </div>
+</div>
+</div>
 
 
-</head>
     <header>
         <h1>Acerca de Que </h1>
         <h2>Metodologia SCRUM  </h2>

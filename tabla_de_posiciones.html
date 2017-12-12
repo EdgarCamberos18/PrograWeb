@@ -129,37 +129,37 @@
     <div class="col-10 offset-1 pt-5" style="opacity: 0.9">
         <table class="table table-inverse">
             <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Equipo</th>
-                    <th scope="col">PJ</th>
-                    <th scope="col">PG</th>
-                    <th scope="col">PE</th>
-                    <th scope="col">PP</th>
-                    <th scope="col">GF</th>
-                    <th scope="col">GC</th>
-                    <th scope="col">DG</th>
-                    <th scope="col">Puntos</th>
-                </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Equipo</th>
+                <th scope="col">PJ</th>
+                <th scope="col">PG</th>
+                <th scope="col">PE</th>
+                <th scope="col">PP</th>
+                <th scope="col">GF</th>
+                <th scope="col">GC</th>
+                <th scope="col">DG</th>
+                <th scope="col">Puntos</th>
+            </tr>
             </thead>
             <tbody>
-                <?php
+            <?php
                     $i=1;
                     foreach ($datos as $col) {
                         ?>
-                        <tr>
-                            <th scope="row"><?php echo $i ?></th>
-                            <td><?php echo $col->NOMBRE_EQUIPO ?></td>
-                            <td><?php echo $col->P_JUGADOS ?></td>
-                            <td><?php echo $col->P_GANADOS ?></td>
-                            <td><?php echo $col->P_EMPATADOS ?></td>
-                            <td><?php echo $col->P_PERDIDOS ?></td>
-                            <td><?php echo $col->G_FAVOR ?></td>
-                            <td><?php echo $col->G_CONTRA ?></td>
-                            <td><?php echo $col->G_DIFERENCA ?></td>
-                            <td><?php echo $col->PUNTOS ?></td>
-                        </tr>
-                <?php
+            <tr>
+                <th scope="row"><?php echo $i ?></th>
+                <td><?php echo $col->NOMBRE_EQUIPO ?></td>
+                <td><?php echo $col->P_JUGADOS ?></td>
+                <td><?php echo $col->P_GANADOS ?></td>
+                <td><?php echo $col->P_EMPATADOS ?></td>
+                <td><?php echo $col->P_PERDIDOS ?></td>
+                <td><?php echo $col->G_FAVOR ?></td>
+                <td><?php echo $col->G_CONTRA ?></td>
+                <td><?php echo $col->G_DIFERENCA ?></td>
+                <td><?php echo $col->PUNTOS ?></td>
+            </tr>
+            <?php
                     $i++;}
                 ?>
         </table>

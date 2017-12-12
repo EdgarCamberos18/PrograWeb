@@ -46,7 +46,7 @@ function Registrar() {
             window.location.reload(true);
         }
     }*/
-
+d
 
     ajax.setRequestHeader("Conen-Type","application/x-www-form-urlencoded");
     ajax.send("titulo="+TITULO+"&encabezado="+ENCABEZADO+"&imagen="+IMAGEN+"&noticia="+NOTICIA);

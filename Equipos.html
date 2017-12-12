@@ -7,13 +7,30 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/modal.css">
 
     <title>Analisis Profundo</title>
+
+    <?php
+
+        require("Conexion.php");
+        $datos=consultar_por_id('equipos','ID_EQUIPO',$_GET['Equipo']);
+    ?>
+    <style>
+        #body2{
+            background: url('<?php echo$datos->ESTADIO?>');
+            height: 90.9vh;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+    </style>
 
 
 </head>
 
-<body class="body1">
+<body id="body2">
 
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse sticky-top ">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +38,7 @@
     </button>
 
     <a class="navbar-brand" href="index.php">
-        <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="Logo de Pagina">
+        <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top rounded-circle" alt="Logo de Pagina">
     </a>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -103,6 +120,11 @@
             </li>
         </ul>
 
+        <li class="form-inline mr-4"  mr-sm-2">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" >Log in</a>
+        </li>
+
+
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -111,61 +133,58 @@
 </nav>
 
 
+<!-- Modal -->
+<div class="modal" style="background: "black"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="container">
+        <div class="card card-container" style="background: url('img/modal.jpg')")>
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" id="form" method="post" action="index.php">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label style="color: #31b0d5">
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" id="cuenta" type="submit" onsubmit="<?php usuario() ?>">Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot-password
+            </a>
+        </div><!-- /card-container -->
+    </div>
+</div>
+</div>
+
+
+
+<section id="principal"  class="container-fluid slider">
 
 
 
 
-
-<section id="principal" class="container-fluid slider">
-    <?php
-    require("Conexion.php");
-    $datos=tablaLiderato();
-    ?>
 
     <header>
-        <h1>Tabla de posiciones</h1>
+        <h1 class="pt-5 pl-5 pr-5 pb-2"><?php echo utf8_encode($datos->NOMBRE_EQUIPO)?></h1>
     </header>
 
-    <div class="col-10 offset-1 pt-5" style="opacity: 0.9">
-        <table class="table table-inverse">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Equipo</th>
-                    <th scope="col">PJ</th>
-                    <th scope="col">PG</th>
-                    <th scope="col">PE</th>
-                    <th scope="col">PP</th>
-                    <th scope="col">GF</th>
-                    <th scope="col">GC</th>
-                    <th scope="col">DG</th>
-                    <th scope="col">Puntos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    $i=1;
-                    foreach ($datos as $col) {
-                        ?>
-                        <tr>
-                            <th scope="row"><?php echo $i ?></th>
-                            <td><?php echo $col->NOMBRE_EQUIPO ?></td>
-                            <td><?php echo $col->P_JUGADOS ?></td>
-                            <td><?php echo $col->P_GANADOS ?></td>
-                            <td><?php echo $col->P_EMPATADOS ?></td>
-                            <td><?php echo $col->P_PERDIDOS ?></td>
-                            <td><?php echo $col->G_FAVOR ?></td>
-                            <td><?php echo $col->G_CONTRA ?></td>
-                            <td><?php echo $col->G_DIFERENCA ?></td>
-                            <td><?php echo $col->PUNTOS ?></td>
-                        </tr>
-                <?php
-                    $i++;}
-                ?>
-        </table>
+    <article class="p-5" >
+        <div style="text-align:center" >
+            <img class="p-5" style="height: 70vh" src="<?php echo utf8_encode($datos->LOGO)?>">
+        </div>
+        <div class="backG" >
+            <h4 class="backG1"><?php echo utf8_encode($datos->INFORMACION)?></h4>
+        </div>
+    </article>
 
+    <footer class="text-right" >
+        <img src="img/logo.jpg" width="200" height="200" class="d-inline-block align-content-end rounded-circle" alt="Logo">
+    </footer>
 
-    </div>
 
 
 </section>
@@ -179,8 +198,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/cambiar_paginas.js"></script>
-
-
+<script src="js/cambiar_pag_noticias.js"></script>
 </body>
 </html>
