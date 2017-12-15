@@ -8,17 +8,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 
     <title>Analisis Profundo</title>
 
-    <?php
 
-        require("Conexion.php");
-        $datos=consultar_por_id('equipos','ID_EQUIPO',$_GET['Equipo']);
-    ?>
     <style>
         #body2{
-            background: url('<?php echo$datos->ESTADIO?>');
             height: 90.9vh;
             background-position: center center;
             background-attachment: fixed;
@@ -37,71 +33,71 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" href="index.php">
+    <a class="navbar-brand" href="index.html">
         <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top rounded-circle" alt="Logo de Pagina">
     </a>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Equipos</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item align-content-center" href="Equipos.php?Equipo=1">
+                    <a class="dropdown-item align-content-center" href="Equipos.html?Equipo=1">
                         <img src="img/Logos_Equipos/America.png" class="d-inline-block align-top" alt="America" width="20" height="20">
                         America</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=2">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=2">
                         <img src="img/Logos_Equipos/Atlas.png" class="d-inline-block align-top" alt="Atlas" width="20" height="20">
                         Atlas</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=3">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=3">
                         <img src="img/Logos_Equipos/Chivas.png" class="d-inline-block align-top" alt="Chivas" width="20" height="20">
                         C. Guadalajara</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=4">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=4">
                         <img src="img/Logos_Equipos/Leon.png" class="d-inline-block align-top" alt="Leon" width="20" height="20">
                         Club Leon</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=18">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=18">
                         <img src="img/Logos_Equipos/Cruz-Azul.png" class="d-inline-block align-top" alt="CruzAzul" width="20" height="20">
                         Cruz Azul</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=5">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=5">
                         <img src="img/Logos_Equipos/Lobos.png" class="d-inline-block align-top" alt="Lobos" width="20" height="20">
                         Lobos BUAP</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=6">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=6">
                         <img src="img/Logos_Equipos/Monterrey.png" class="d-inline-block align-top" alt="Monterrey" width="20" height="20">
                         C.F. Monterrey</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=7">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=7">
                         <img src="img/Logos_Equipos/Morelia.png" class="d-inline-block align-top" alt="Morelia" width="20" height="20">
                         C.A. Monarcas Morelia</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=8">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=8">
                         <img src="img/Logos_Equipos/Necaxa.png" class="d-inline-block align-top" alt="Necaa" width="20" height="20">
                         Club Necaxa</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=9">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=9">
                         <img src="img/Logos_Equipos/Pachuca.png" class="d-inline-block align-top" alt="Pachuca" width="20" height="20">
                         C.F. Pachuca</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=10">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=10">
                         <img src="img/Logos_Equipos/Puebla.png" class="d-inline-block align-top" alt="Puebla" width="20" height="20">
                         Club Puebla</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=11">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=11">
                         <img src="img/Logos_Equipos/Queretaro.png" class="d-inline-block align-top" alt="Queretaro" width="20" height="20">
                         Queretaro FC</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=12">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=12">
                         <img src="img/Logos_Equipos/Santos.png" class="d-inline-block align-top" alt="Santos" width="20" height="20">
                         Santos Laguna</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=13">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=13">
                         <img src="img/Logos_Equipos/Tigres.png" class="d-inline-block align-top" alt="Tigres" width="20" height="20">
                         Tigres de la UANL</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=17">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=17">
                         <img src="img/Logos_Equipos/xolos.png" class="d-inline-block align-top" alt="Xolos" width="20" height="20">
                         Club Tijuana</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=14">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=14">
                         <img src="img/Logos_Equipos/Toluca.png" class="d-inline-block align-top" alt="Toluca" width="20" height="20">
                         Deportivo Toluca</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=15">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=15">
                         <img src="img/Logos_Equipos/Pumas.png" class="d-inline-block align-top" alt="Pumas" width="20" height="20">
                         Pumas de la UNAM</a>
-                    <a class="dropdown-item" href="Equipos.php?Equipo=16">
+                    <a class="dropdown-item" href="Equipos.html?Equipo=16">
                         <img src="img/Logos_Equipos/Veracruz.png" class="d-inline-block align-top" alt="Veracruz" width="20" height="20">
                         T.R. Veracruz</a>
                 </div>
@@ -110,7 +106,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estadisticas</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="tabla_de_posiciones.php">Tabla de posiciones</a>
+                    <a class="dropdown-item" href="tabla_de_posiciones.html">Tabla de posiciones</a>
                     <!--<a class="dropdown-item" href="tabla_de_goleo.html">Tabla de goleo</a>-->
                 </div>
             </li>
@@ -141,7 +137,7 @@
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin" id="form" method="post" action="index.php">
+            <form class="form-signin" id="form" method="post" action="index.html">
                 <span id="reauth-email" class="reauth-email"></span>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
@@ -150,7 +146,7 @@
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" id="cuenta" type="submit" onsubmit="<?php usuario() ?>">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" id="cuenta" type="submit" >">Sign in</button>
             </form><!-- /form -->
             <a href="#" class="forgot-password">
                 Forgot-password
@@ -169,15 +165,15 @@
 
 
     <header>
-        <h1 class="pt-5 pl-5 pr-5 pb-2"><?php echo utf8_encode($datos->NOMBRE_EQUIPO)?></h1>
+        <h1 id="h1t" class="pt-5 pl-5 pr-5 pb-2"></h1>
     </header>
 
     <article class="p-5" >
         <div style="text-align:center" >
-            <img class="p-5" style="height: 70vh" src="<?php echo utf8_encode($datos->LOGO)?>">
+            <img id="imgl" class="p-5" style="height: 70vh">
         </div>
         <div class="backG" >
-            <h4 class="backG1"><?php echo utf8_encode($datos->INFORMACION)?></h4>
+            <h4 id="h4i" class="backG1"></h4>
         </div>
     </article>
 
@@ -199,5 +195,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/cambiar_pag_noticias.js"></script>
+
+
+<script src="js/equipos.js"></script>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCSoqazz1u8-Po9563_FvuaNYK7s5SQoGI",
+        authDomain: "tercertiempo-d73f5.firebaseapp.com",
+        databaseURL: "https://tercertiempo-d73f5.firebaseio.com",
+        projectId: "tercertiempo-d73f5",
+        storageBucket: "tercertiempo-d73f5.appspot.com",
+        messagingSenderId: "453239723807"
+    };
+    firebase.initializeApp(config);
+</script>
+
 </body>
 </html>
